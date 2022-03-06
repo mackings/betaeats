@@ -1,0 +1,8 @@
+{
+    "gitlab.repositories": {
+        "c:\\Users\\robor": {
+            "preferredRemoteName": "beta-eats"
+        }
+    },
+    "git.ignoreLimitWarning": true
+}

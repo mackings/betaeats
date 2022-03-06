@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "569013625185",
+    "project_id": "beta-eats",
+    "storage_bucket": "beta-eats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569013625185:android:8458fa6ddf6f1d791b6520",
+        "android_client_info": {
+          "package_name": "com.example.beta_eats"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "569013625185-4tboaep6v72n5j3j0cblld9tnidefgsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQzzmEcimmY9pEED9yRaSQrbpg5u_qoCg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "569013625185-4tboaep6v72n5j3j0cblld9tnidefgsd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
