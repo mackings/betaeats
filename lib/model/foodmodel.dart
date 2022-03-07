@@ -24,34 +24,34 @@ class Food {
   }
 }
 
-class Foodpro extends ChangeNotifier {
-  var CartList = [];
+List<Food> CartList = [];
 
+class Foodpro extends ChangeNotifier {
   final List<Food> foods = [
     Food(
       name: 'Chicken',
-      image: 'assets/images/chicken.jpg',
+      image: 'assets/jollof.png',
       description:
           'Chicken is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 100,
     ),
     Food(
       name: 'Fish',
-      image: 'assets/images/fish.jpg',
+      image: 'assets/jollofricejpg',
       description:
           'Fish are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
       price: 200,
     ),
     Food(
       name: 'Mutton',
-      image: 'assets/images/mutton.jpg',
+      image: 'assets/rice.png',
       description:
           'Mutton is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 300,
     ),
     Food(
       name: 'Egg',
-      image: 'assets/images/egg.jpg',
+      image: 'assets/sandw.png',
       description:
           'Egg is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 400,
@@ -88,43 +88,31 @@ class Foodpro extends ChangeNotifier {
     notifyListeners();
   }
 
-
+  /// for adding food to cart
   addtocartlist(Food food) {
     CartList.add(food);
     notifyListeners();
   }
 
+//// for removing food from cart
   removefromcartlist(Food food) {
     CartList.remove(food);
     notifyListeners();
   }
-
-
-
-
-
-
 }
 
+class mealist extends ChangeNotifier {
+  List Mealists = [];
 
-
-class mealist extends ChangeNotifier{
-
- List Mealists = [];
-
- void addmeal(Food food){
-   Mealists.add(food);
-   notifyListeners();
- }
-
-  void removemeal(Food food){
-    Mealists.remove(food);
+  void addmeal(Food food) {
+    Mealists.add(food);
     notifyListeners();
   }
 
-
-
-
+  void removemeal(Food food) {
+    Mealists.remove(food);
+    notifyListeners();
+  }
 }
 
 final mealsprovider = ChangeNotifierProvider((ref) => mealist());
