@@ -43,36 +43,36 @@ class Foodpro extends ChangeNotifier {
       price: 200,
     ),
     Food(
-      name: 'Mutton',
-      image: 'assets/rice.png',
+      name: 'Cake2',
+      image: 'assets/cake2.jpg',
       description:
-          'Mutton is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
+          'Cake is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 300,
     ),
     Food(
-      name: 'Egg',
-      image: 'assets/sandw.png',
+      name: 'Chicken',
+      image: 'assets/chicken.jpg',
       description:
-          'Egg is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
+          'Chicken is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 400,
     ),
     Food(
-      name: 'Milk',
-      image: 'assets/milk.jpg',
+      name: 'Roll',
+      image: 'assets/roll.jpg',
       description:
-          'Milk is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
+          'Roll is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 500,
     ),
     Food(
       name: 'Rice',
-      image: 'assets/rice.jpg',
+      image: 'assets/rice.png',
       description:
           'Rice is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 600,
     ),
     Food(
-      name: 'Sugar',
-      image: 'assets/sugar.jpg',
+      name: 'Snacks',
+      image: 'assets/snacks.jpg',
       description: 'Sugar is a type',
       price: 600,
     ),
