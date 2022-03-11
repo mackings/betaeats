@@ -62,7 +62,9 @@ class _CartState extends State<Cart> {
   }
 
   List<Widget> buildFoods() {
-    List<Widget> list = [];
+    List<Widget> list = [
+      const SizedBox(height: 20),
+    ];
     totalprice = 0;
     for (var i = 0; i < foodd.length; i++) {
       list.add(
