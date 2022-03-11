@@ -46,17 +46,8 @@ class _CartState extends State<Cart> {
   }
 
   Widget foodProperty(Food food, int index) {
-    return GestureDetector(
-      onDoubleTap: () {
-        if (foodd.contains(food)) {
-          Foodpro().removefromcartlist(food);
-          ScaffoldMessenger.of(context).showSnackBar(snackBar2);
-        } else {
-          Foodpro().addtocartlist(food);
-        }
-
-        setState(() {});
-      },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 14.0),
       child: Card(
         margin: const EdgeInsets.only(bottom: 24),
         clipBehavior: Clip.antiAlias,
@@ -90,30 +81,61 @@ class _CartState extends State<Cart> {
                 ],
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    food.name!,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        food.name!,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          backgroundColor: Colors.white54,
+                          fontFamily: "Montserrat",
+                        ),
+                      ),
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Price: ${food.price!}",
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                          backgroundColor: Colors.white54,
+                          fontFamily: "Montserrat",
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Price: ${food.price!}",
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
-                    ),
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.white54,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon:
+                        const Icon(Icons.shopping_cart, color: Colors.black54),
+                    onPressed: () {
+                      if (foodd.contains(food)) {
+                        Foodpro().removefromcartlist(food);
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar2);
+                      } else {
+                        Foodpro().addtocartlist(food);
+                      }
+
+                      setState(() {});
+                    },
+                    tooltip:
+                        MaterialLocalizations.of(context).openAppDrawerTooltip,
                   ),
                 ),
               ],

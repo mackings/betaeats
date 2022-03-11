@@ -90,16 +90,8 @@ class Avail extends StatelessWidget {
   }
 
   Widget foodProperty(Food food, int index, context) {
-    return GestureDetector(
-      onDoubleTap: () {
-        if (cartList.contains(food)) {
-          Foodpro().removefromcartlist(food);
-          ScaffoldMessenger.of(context).showSnackBar(snackBar2);
-        } else {
-          Foodpro().addtocartlist(food);
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
-        }
-      },
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 14.0),
       child: Card(
         margin: const EdgeInsets.only(bottom: 24),
         clipBehavior: Clip.antiAlias,
@@ -113,10 +105,9 @@ class Avail extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: food.image != null
-                  ? Image.asset(
+                  ? AssetImage(
                       food.image!,
-                      fit: BoxFit.cover,
-                    ).image
+                    )
                   : Image.network('').image,
               fit: BoxFit.cover,
             ),
@@ -133,30 +124,60 @@ class Avail extends StatelessWidget {
                 ],
               ),
             ),
-            child: Column(
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    food.name!,
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        food.name!,
+                        style: const TextStyle(
+                          backgroundColor: Colors.white54,
+                          color: Colors.black,
+                          fontSize: 14,
+                          fontFamily: "Montserrat",
+                        ),
+                      ),
                     ),
-                  ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        "Price: ${food.price!}",
+                        style: const TextStyle(
+                          color: Colors.black,
+                          backgroundColor: Colors.white54,
+                          fontSize: 14,
+                          fontFamily: "Montserrat",
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    "Price: ${food.price!}",
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
-                    ),
+                Container(
+                  margin: const EdgeInsets.all(8.0),
+                  decoration: const BoxDecoration(
+                    color: Colors.white54,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    icon:
+                        const Icon(Icons.shopping_cart, color: Colors.black54),
+                    onPressed: () {
+                      if (cartList.contains(food)) {
+                        Foodpro().removefromcartlist(food);
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar2);
+                      } else {
+                        Foodpro().addtocartlist(food);
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
+                    },
+                    tooltip:
+                        MaterialLocalizations.of(context).openAppDrawerTooltip,
                   ),
                 ),
               ],

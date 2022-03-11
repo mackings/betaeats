@@ -37,7 +37,7 @@ class Foodpro extends ChangeNotifier {
     ),
     Food(
       name: 'Fish',
-      image: 'assets/jollofricejpg',
+      image: 'assets/jollofrice.jpg',
       description:
           'Fish are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
       price: 200,
@@ -58,24 +58,66 @@ class Foodpro extends ChangeNotifier {
     ),
     Food(
       name: 'Milk',
-      image: 'assets/images/milk.jpg',
+      image: 'assets/milk.jpg',
       description:
           'Milk is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 500,
     ),
     Food(
       name: 'Rice',
-      image: 'assets/images/rice.jpg',
+      image: 'assets/rice.jpg',
       description:
           'Rice is a type of bird in the family of gallinaceous birds. It is a domesticated species and is the most widely domesticated bird in the world.',
       price: 600,
     ),
     Food(
       name: 'Sugar',
-      image: 'assets/images/sugar.jpg',
+      image: 'assets/sugar.jpg',
       description: 'Sugar is a type',
       price: 600,
-    )
+    ),
+    Food(
+      name: 'Pizza',
+      image: 'assets/pizza.jpeg',
+      description:
+          'pizza are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 700,
+    ),
+    Food(
+      name: 'Fufu',
+      image: 'assets/fufu.jpg',
+      description:
+          'fufu are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 300,
+    ),
+    Food(
+      name: 'Pie',
+      image: 'assets/pie.jpg',
+      description:
+          'pie are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 200,
+    ),
+    Food(
+      name: 'Noodles',
+      image: 'assets/noodles.jpeg',
+      description:
+          'noodles are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 300,
+    ),
+    Food(
+      name: 'Ofada',
+      image: 'assets/ofada.jpg',
+      description:
+          'Ofada are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 200,
+    ),
+    Food(
+      name: 'sandwish',
+      image: 'assets/sandwish.jpg',
+      description:
+          'sandwish are a diverse and widespread group of aquatic, gill-bearing aquatic craniate animals. They range in size from very small, such as the carp, to very large, such as the Great White shark.',
+      price: 200,
+    ),
   ];
 
   addfood(Food food) {
