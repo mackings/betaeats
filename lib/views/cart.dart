@@ -9,6 +9,7 @@ class Cart extends StatefulWidget {
 }
 
 class _CartState extends State<Cart> {
+  int totalprice = 0;
   List<Food> foodd = CartList;
   final snackBar2 = const SnackBar(
       content: Text("Removed from Cart"),
@@ -29,18 +30,46 @@ class _CartState extends State<Cart> {
           centerTitle: true,
           backgroundColor: Colors.orange,
         ),
-        body: ListView(
-          physics: const BouncingScrollPhysics(),
-          scrollDirection: Axis.vertical,
-          children: buildFoods(),
+        body: Stack(
+          children: [
+            ListView(
+              physics: const BouncingScrollPhysics(),
+              scrollDirection: Axis.vertical,
+              children: buildFoods(),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 10.0),
+                    child: Text(
+                      'Total: $totalprice',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 17,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ));
   }
 
   List<Widget> buildFoods() {
     List<Widget> list = [];
+    totalprice = 0;
     for (var i = 0; i < foodd.length; i++) {
       list.add(
           Hero(tag: foodd[i].image ?? '', child: foodProperty(foodd[i], i)));
+
+      totalprice += foodd[i].price!;
+      setState(() {});
     }
     return list;
   }

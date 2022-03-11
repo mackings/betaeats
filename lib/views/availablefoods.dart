@@ -80,7 +80,9 @@ class Avail extends StatelessWidget {
   }
 
   List<Widget> buildFoods(context) {
-    List<Widget> list = [];
+    List<Widget> list = [
+      const SizedBox(height: 20),
+    ];
     for (var i = 0; i < foodd.length; i++) {
       list.add(Hero(
           tag: foodd[i].image ?? '',
