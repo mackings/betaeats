@@ -1,5 +1,5 @@
 import 'package:beta_eats/views/availablefoods.dart';
-import 'package:beta_eats/views/home.dart';
+import 'package:beta_eats/views/bhome.dart';
 import 'package:flutter/material.dart';
 import 'package:beta_eats/Auths/auth.dart';
 
@@ -169,7 +169,7 @@ class _SigninState extends State<Signin> {
                             });
                       } else {
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Avail()));
+                            MaterialPageRoute(builder: (context) => Home()));
                       }
                     },
                     child: Container(
